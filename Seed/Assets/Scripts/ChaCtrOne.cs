@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class ChaCtrOne : MonoBehaviour {
     public float MoveSpeed = 1.0f;
+    private float SavePositionX;
 
     private bool Onground = true;
     private Rigidbody rig;
 	// Use this for initialization
 	void Awake () {
         rig = GetComponent<Rigidbody>();
+
+        //重新开始时重生在存档位置play
+        SavePositionX = PlayerPrefs.GetFloat("move");
+        transform.position = new Vector3(SavePositionX, transform.position.y, 0);
 	}
 	
 	// Update is called once per frame
@@ -25,11 +30,11 @@ public class ChaCtrOne : MonoBehaviour {
         {
             print("2");
         }
-if ((Input.GetKeyDown(KeyCode.Space)||(Input.GetKeyDown(KeyCode.Joystick1Button0)))&&Onground)
-            {
-                print("1");
+        if ((Input.GetKeyDown(KeyCode.Space)||(Input.GetKeyDown(KeyCode.Joystick1Button0)))&&Onground)
+        {
+            print("1");
             rig.velocity = new Vector3(0, 5, 0);
-            }
+        }
 	}
     private void FixedUpdate()
     {
