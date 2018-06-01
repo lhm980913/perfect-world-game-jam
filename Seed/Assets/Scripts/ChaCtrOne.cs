@@ -25,30 +25,30 @@ public class ChaCtrOne : MonoBehaviour {
         {
             print("2");
         }
-if (Input.GetKeyDown(KeyCode.Joystick1Button0)&&Onground)
+if (Input.GetKeyDown(KeyCode.Space)||(Input.GetKeyDown(KeyCode.Joystick1Button0))&&Onground)
             {
                 print("1");
-                rig.AddForce(new Vector3(0, 100, 0));
+            rig.velocity = new Vector3(0, 5, 0);
             }
 	}
     private void FixedUpdate()
     {
-       
-            
-        
-        //if (!Onground)
-        //{
-        //    rig.AddForce(new Vector3(0, -1, 0));
-        //}
+
+
+
+        if (!Onground)
+        {
+            rig.AddForce(new Vector3(0, -10, 0));
+        }
     }
     public void IsGround()
     {
         Onground = true;
-        print("YES");
+       
     }
     public void IsNotGround()
     {
         Onground = false;
-        print("NO");
+        
     }
 }

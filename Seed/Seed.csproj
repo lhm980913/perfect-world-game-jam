@@ -312,6 +312,7 @@
     <Compile Include="Assets\Scenes\base.cs" />
     <Compile Include="Assets\Scripts\ChaCtrOne.cs" />
     <Compile Include="Assets\Scripts\ChaCtrTwo.cs" />
+    <Compile Include="Assets\Scripts\OnFloorSensor.cs" />
     <Compile Include="Assets\Scripts\OnGroundSensor.cs" />
   </ItemGroup>
   <ItemGroup>

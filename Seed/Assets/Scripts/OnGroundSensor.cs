@@ -12,7 +12,7 @@ public class OnGroundSensor : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
-        radius=0.5f;
+        radius=capcol.radius;
     }
 
     // Update is called once per frame
