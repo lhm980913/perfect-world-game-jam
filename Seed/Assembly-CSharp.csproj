@@ -60,8 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\base.cs" />
+    <Compile Include="Assets\Scripts\camera_f.cs" />
     <Compile Include="Assets\Scripts\ChaCtrOne.cs" />
     <Compile Include="Assets\Scripts\ChaCtrTwo.cs" />
+    <Compile Include="Assets\Scripts\OnFloorSensor.cs" />
     <Compile Include="Assets\Scripts\OnGroundSensor.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/perfect world game jam/Seed/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
