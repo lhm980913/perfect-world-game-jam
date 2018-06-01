@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChaCtrOne : MonoBehaviour {
+
     public float MoveSpeed = 1.0f;
     public Rigidbody target_2;
     public bool Onground = true;
@@ -13,6 +15,8 @@ public class ChaCtrOne : MonoBehaviour {
     // Use this for initialization
     void Awake () {
         rig = GetComponent<Rigidbody>();
+        //reset the player in the last saveplace
+        transform.position = new Vector3(PlayerPrefs.GetFloat("save_x"), transform.position.y, 0);
 	}
 	
 	// Update is called once per frame
