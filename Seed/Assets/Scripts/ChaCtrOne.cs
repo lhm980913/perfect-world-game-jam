@@ -19,17 +19,15 @@ public class ChaCtrOne : MonoBehaviour {
             transform.Translate(Vector3.right * MoveSpeed* Input.GetAxis("1PLeft") * Time.deltaTime, Space.World);
         }
         //按A键，跳跃
-        
+        if ((Input.GetKeyDown(KeyCode.Space)||(Input.GetKeyDown(KeyCode.Joystick1Button0)))&&Onground)
+            {
+            rig.velocity = new Vector3(0, 5, 0);
+            }
         //按B键，拉
         if(Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
-            print("2");
         }
-if (Input.GetKeyDown(KeyCode.Space)||(Input.GetKeyDown(KeyCode.Joystick1Button0))&&Onground)
-            {
-                print("1");
-            rig.velocity = new Vector3(0, 5, 0);
-            }
+
 	}
     private void FixedUpdate()
     {
