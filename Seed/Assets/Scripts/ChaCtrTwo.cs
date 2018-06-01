@@ -24,7 +24,7 @@ public class ChaCtrTwo : MonoBehaviour {
         }
         else
         {
-            rig.velocity = new Vector3(0f, rig.velocity.y, 0f);
+           
         }
         //按A键，跳跃
         if ((Input.GetKeyDown(KeyCode.Joystick2Button0)||Input.GetKeyDown(KeyCode.J))&&OnFloor)
@@ -44,6 +44,7 @@ public class ChaCtrTwo : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.Joystick1Button1) || Input.GetKeyUp(KeyCode.K))
         {
             la = false;
+            target_1.velocity = new Vector3(0f, target_1.velocity.y, 0f);
         }
         //按B键，拉
         if (Input.GetKey(KeyCode.Joystick1Button1) || Input.GetKey(KeyCode.K))
@@ -51,10 +52,10 @@ public class ChaCtrTwo : MonoBehaviour {
 
             Vector3 dic = new Vector3();
             dic = (-target_1.position + transform.position) / Vector3.Distance(target_1.position, transform.position);
-            
+            target_1.AddForce(new Vector3(dic.x, 0f, 0f) * force * 1.5f, ForceMode.Force);
             if (target_1.velocity.y < 0)
             {
-                target_1.AddForce(dic * force * 1.5f, ForceMode.Force);
+                target_1.AddForce(new Vector3(0f, dic.y, 0f) * force * 1.5f, ForceMode.Force);
             }
         }
     }

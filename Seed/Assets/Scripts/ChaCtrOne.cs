@@ -25,7 +25,7 @@ public class ChaCtrOne : MonoBehaviour {
         }
         else
         {
-           rig.velocity = new Vector3(0f,rig.velocity.y, 0f);
+          
         }
         //按A键，跳跃
         if (Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKeyDown(KeyCode.Z))
@@ -43,7 +43,7 @@ public class ChaCtrOne : MonoBehaviour {
         {
            
                 la = false;
-            
+            target_2.velocity = new Vector3(0f, target_2.velocity.y, 0f);
         }
         //按B键，拉
         if (Input.GetKey(KeyCode.Joystick1Button1)|| Input.GetKey(KeyCode.Z))
@@ -51,10 +51,11 @@ public class ChaCtrOne : MonoBehaviour {
             
             Vector3 dic = new Vector3();
             dic = (-target_2.position + transform.position) / Vector3.Distance(target_2.position, transform.position);
-            
+
+            target_2.AddForce(new Vector3(dic.x, 0f, 0f) * force * 1.5f, ForceMode.Force);
             if (target_2.velocity.y > 0)
             {
-                target_2.AddForce(dic * force * 1.5f, ForceMode.Force);
+                target_2.AddForce(new Vector3(0f,dic.y,0f) * force * 1.5f, ForceMode.Force);
             }
         }
         if ((Input.GetKeyDown(KeyCode.Space)||(Input.GetKeyDown(KeyCode.Joystick1Button0)))&&Onground)
