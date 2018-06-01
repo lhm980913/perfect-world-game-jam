@@ -317,6 +317,8 @@
     <Compile Include="Assets\Scripts\EnemyGround.cs" />
     <Compile Include="Assets\Scripts\OnFloorSensor.cs" />
     <Compile Include="Assets\Scripts\OnGroundSensor.cs" />
+    <Compile Include="Assets\Scripts\RockCtr.cs" />
+    <Compile Include="Assets\Scripts\trapCtr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\Users\棋子\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
