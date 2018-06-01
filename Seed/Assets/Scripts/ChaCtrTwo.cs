@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ChaCtrTwo : MonoBehaviour {
     public float MoveSpeed = 1.0f;
-    private bool OnFloor = true;
+    public bool OnFloor = true;
     public Rigidbody target_1;
     public float force;
-    bool la;
+    public bool la;
     private Rigidbody rig;
     // Use this for initialization
     void Awake()
@@ -31,9 +31,19 @@ public class ChaCtrTwo : MonoBehaviour {
         {
             rig.velocity = new Vector3(0, -5, 0);
         }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKeyDown(KeyCode.K))
+        {
+            Vector3 dic = new Vector3();
+            dic = (-target_1.position + transform.position) / Vector3.Distance(target_1.position, transform.position);
+            if (la)
+            {
+                target_1.velocity += dic * force;
+               
+            }
+        }
         if (Input.GetKeyUp(KeyCode.Joystick1Button1) || Input.GetKeyUp(KeyCode.K))
         {
-            la = true;
+            la = false;
         }
         //按B键，拉
         if (Input.GetKey(KeyCode.Joystick1Button1) || Input.GetKey(KeyCode.K))
@@ -41,11 +51,7 @@ public class ChaCtrTwo : MonoBehaviour {
 
             Vector3 dic = new Vector3();
             dic = (-target_1.position + transform.position) / Vector3.Distance(target_1.position, transform.position);
-            if (la)
-            {
-                target_1.velocity += dic * force;
-                la = false;
-            }
+            
             if (target_1.velocity.y < 0)
             {
                 target_1.AddForce(dic * force * 1.5f, ForceMode.Force);
@@ -62,11 +68,11 @@ public class ChaCtrTwo : MonoBehaviour {
     public void IsFloor()
     {
         OnFloor = true;
-        print("YES!!!");
+        target_1.gameObject.GetComponent<ChaCtrOne>().la = true;
     }
     public void IsNotFloor()
     {
         OnFloor = false;
-        print("NO!!!");
+       
     }
 }
