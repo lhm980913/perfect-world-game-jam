@@ -27,7 +27,6 @@ public class ChaCtrOne : MonoBehaviour {
            rig.velocity = new Vector3(0f,rig.velocity.y, 0f);
         }
         //按A键，跳跃
-<<<<<<< HEAD
         if (Input.GetKeyUp(KeyCode.Joystick1Button1) || Input.GetKeyUp(KeyCode.Z))
         {
             la = true;
@@ -53,16 +52,6 @@ public class ChaCtrOne : MonoBehaviour {
                
             rig.velocity = new Vector3(0, 5, 0);
         }
-=======
-        if ((Input.GetKeyDown(KeyCode.Space)||(Input.GetKeyDown(KeyCode.Joystick1Button0)))&&Onground)
-            {
-            rig.velocity = new Vector3(0, 5, 0);
-            }
-        //按B键，拉
-        if(Input.GetKeyDown(KeyCode.Joystick1Button1))
-        {
-        }
->>>>>>> 2991c9badcce64e0d6457527f71d9eebaf73bab9
 
 	}
     private void FixedUpdate()
