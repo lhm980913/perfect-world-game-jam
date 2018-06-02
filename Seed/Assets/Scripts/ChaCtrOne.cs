@@ -12,7 +12,7 @@ public class ChaCtrOne : MonoBehaviour {
     public float force;
     public bool la;
     public float pull;
-    public bool firstplay = true;
+    private bool IsWater = false;
     // Use this for initialization
     void Awake () {
         rig = GetComponent<Rigidbody>();
@@ -67,13 +67,18 @@ public class ChaCtrOne : MonoBehaviour {
                 target_2.AddForce(new Vector3(0f,dic.y,0f) * force * 1.5f, ForceMode.Force);
             }
         }
-        if ((Input.GetKeyDown(KeyCode.Space)||(Input.GetKeyDown(KeyCode.Joystick1Button0)))&&Onground)
+        if (((Input.GetKeyDown(KeyCode.Space)||(Input.GetKeyDown(KeyCode.Joystick1Button0)))&&Onground)&&!IsWater)
         {
                
             rig.velocity = new Vector3(0, 5, 0);
         }
+        else if (((Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown(KeyCode.Joystick1Button0))) && Onground) && IsWater)
+        {
 
-	}
+            rig.velocity = new Vector3(0, 2, 0);
+        }
+
+    }
     private void FixedUpdate()
     {
 
@@ -97,5 +102,13 @@ public class ChaCtrOne : MonoBehaviour {
     public void death()
     {
         SceneManager.LoadScene("main");
+    }
+    public void InWater()
+    {
+        IsWater = true;
+    }
+    public void OutWater()
+    {
+        IsWater = false;
     }
 }

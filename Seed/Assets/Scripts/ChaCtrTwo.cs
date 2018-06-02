@@ -11,6 +11,7 @@ public class ChaCtrTwo : MonoBehaviour {
     public bool la;
     private Rigidbody rig;
     public float pull;
+    private bool IsWater = false;
     // Use this for initialization
     void Awake()
     {
@@ -36,9 +37,13 @@ public class ChaCtrTwo : MonoBehaviour {
            
         }
         //按A键，跳跃
-        if ((Input.GetKeyDown(KeyCode.Joystick2Button0)||Input.GetKeyDown(KeyCode.J))&&OnFloor)
+        if (((Input.GetKeyDown(KeyCode.Joystick2Button0)||Input.GetKeyDown(KeyCode.J))&&OnFloor)&&!IsWater)
         {
             rig.velocity = new Vector3(0, -5, 0);
+        }
+        else if (((Input.GetKeyDown(KeyCode.Joystick2Button0) || Input.GetKeyDown(KeyCode.J)) && OnFloor) && IsWater)
+        {
+            rig.velocity = new Vector3(0, -2, 0);
         }
         if (Input.GetKeyDown(KeyCode.Joystick2Button5) || Input.GetKeyDown(KeyCode.K))
         {
@@ -88,5 +93,13 @@ public class ChaCtrTwo : MonoBehaviour {
     public void death()
     {
         SceneManager.LoadScene("main");
+    }
+    public void InWater()
+    {
+        IsWater = true;
+    }
+    public void OutWater()
+    {
+        IsWater = false;
     }
 }
