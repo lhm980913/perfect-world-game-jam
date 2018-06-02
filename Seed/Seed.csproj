@@ -309,6 +309,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\cccccc.cs" />
+    <Compile Include="Assets\check.cs" />
+    <Compile Include="Assets\colliderToHurt.cs" />
     <Compile Include="Assets\gamemanager.cs" />
     <Compile Include="Assets\rollTobigBall.cs" />
     <Compile Include="Assets\rotateByPoint.cs" />
@@ -317,6 +320,8 @@
     <Compile Include="Assets\Scripts\camera_f.cs" />
     <Compile Include="Assets\Scripts\ChaCtrOne.cs" />
     <Compile Include="Assets\Scripts\ChaCtrTwo.cs" />
+    <Compile Include="Assets\Scripts\enemy_gravity.cs" />
+    <Compile Include="Assets\Scripts\enemy_walk.cs" />
     <Compile Include="Assets\Scripts\EnemyFloor.cs" />
     <Compile Include="Assets\Scripts\EnemyGround.cs" />
     <Compile Include="Assets\Scripts\OnFloorSensor.cs" />
@@ -325,19 +330,11 @@
     <Compile Include="Assets\Scripts\trapCtr.cs" />
     <Compile Include="Assets\Scripts\WaterCtr.cs" />
     <Compile Include="Assets\Scripts\WindArea.cs" />
+    <Compile Include="Assets\springToSummer.cs" />
+    <Compile Include="Assets\tiaolou.cs" />
+    <Compile Include="Assets\zhuang.cs" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <None Include="C:\Users\15801\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
-    <None Include="C:\Users\15801\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
-    <None Include="C:\Users\15801\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />
-    <None Include="C:\Users\15801\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageDetails.uxml" />
-    <None Include="C:\Users\15801\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageGroup.uxml" />
-    <None Include="C:\Users\15801\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageItem.uxml" />
-    <None Include="C:\Users\15801\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageList.uxml" />
-    <None Include="C:\Users\15801\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageManagerWindow.uxml" />
-    <None Include="C:\Users\15801\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageSearchFilterTabs.uxml" />
-=======
     <None Include="C:\Users\棋子\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="C:\Users\棋子\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="C:\Users\棋子\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />
@@ -347,7 +344,6 @@
     <None Include="C:\Users\棋子\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageList.uxml" />
     <None Include="C:\Users\棋子\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageManagerWindow.uxml" />
     <None Include="C:\Users\棋子\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageSearchFilterTabs.uxml" />
->>>>>>> 3c0f6132763bc7c2d3ea23b82b4503d7430b0bd6
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
