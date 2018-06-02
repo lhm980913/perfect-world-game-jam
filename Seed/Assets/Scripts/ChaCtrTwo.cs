@@ -12,11 +12,14 @@ public class ChaCtrTwo : MonoBehaviour {
     private Rigidbody rig;
     public float pull;
     private bool IsWater = false;
+
+    public GameObject Player;
+    private Animator anim;
     // Use this for initialization
     void Awake()
     {
         rig = GetComponent<Rigidbody>();
-        //reset the player in the last saveplace
+        anim = Player.GetComponent<Animator>();
         
     }
     private void Start()
@@ -26,11 +29,20 @@ public class ChaCtrTwo : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
+        anim.SetFloat("Forward",Mathf.Abs(Input.GetAxis("2PLeft")));
 
         if (Input.GetAxis("2PLeft") != 0)
         {
+            
             transform.Translate(Vector3.right * MoveSpeed * Input.GetAxis("2PLeft") * Time.deltaTime, Space.World);
+            if(Input.GetAxis("2PLeft")>0)
+            {
+                Player.transform.localEulerAngles = new Vector3(180, -60, 0);
+            }
+            if (Input.GetAxis("2PLeft") < 0)
+            {
+                Player.transform.localEulerAngles = new Vector3(180, 60, 0);
+            }
         }
         else
         {
@@ -40,6 +52,7 @@ public class ChaCtrTwo : MonoBehaviour {
         if (((Input.GetKeyDown(KeyCode.Joystick2Button0)||Input.GetKeyDown(KeyCode.J))&&OnFloor)&&!IsWater)
         {
             rig.velocity = new Vector3(0, -5, 0);
+            anim.SetTrigger("Jump");
         }
         else if (((Input.GetKeyDown(KeyCode.Joystick2Button0) || Input.GetKeyDown(KeyCode.J)) && OnFloor) && IsWater)
         {
@@ -82,11 +95,13 @@ public class ChaCtrTwo : MonoBehaviour {
     }
     public void IsFloor()
     {
+        anim.SetBool("Fall", false);
         OnFloor = true;
         target_1.gameObject.GetComponent<ChaCtrOne>().la = true;
     }
     public void IsNotFloor()
     {
+        anim.SetBool("Fall", true);
         OnFloor = false;
        
     }
