@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\OnGroundSensor.cs" />
     <Compile Include="Assets\Scripts\RockCtr.cs" />
     <Compile Include="Assets\Scripts\trapCtr.cs" />
+    <Compile Include="Assets\Scripts\WindArea.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/perfect world game jam/Seed/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

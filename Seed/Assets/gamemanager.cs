@@ -4,10 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class gamemanager : MonoBehaviour {
-
+    public static int i = 0;
+    public GameObject begin;
 	// Use this for initialization
-	void Start () {
-		
+	void Awake () {
+        if (i == 0)
+        {
+            PlayerPrefs.SetFloat("save_x", begin.transform.position.x);
+            i++;
+        }
+        else;
 	}
 	
 	// Update is called once per frame
