@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 136126887426917234}
   - component: {fileID: 54851440729642510}
   - component: {fileID: 114910413438761462}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4068476466654446}
   - component: {fileID: 114163986669206176}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SensorGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1122993408616822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+
   m_LocalPosition: {x: 0, y: -3.24, z: 0}
+
+
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4068476466654446}
@@ -159,7 +162,10 @@ MonoBehaviour:
   target_2: {fileID: 0}
   Onground: 1
   force: 5
+
   la: 0
+
+
   pull: 3
 --- !u!136 &136126887426917234
 CapsuleCollider:
@@ -167,7 +173,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1122993408616822}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 82d8ebdbbf0e08346b7931e3b2176777, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
