@@ -309,6 +309,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\gamemanager.cs" />
+    <Compile Include="Assets\rollTobigBall.cs" />
+    <Compile Include="Assets\rotateByPoint.cs" />
+    <Compile Include="Assets\savePlace.cs" />
     <Compile Include="Assets\Scenes\base.cs" />
     <Compile Include="Assets\Scripts\camera_f.cs" />
     <Compile Include="Assets\Scripts\ChaCtrOne.cs" />

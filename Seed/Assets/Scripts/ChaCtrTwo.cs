@@ -10,6 +10,7 @@ public class ChaCtrTwo : MonoBehaviour {
     public float force;
     public bool la;
     private Rigidbody rig;
+    public float pull;
     // Use this for initialization
     void Awake()
     {
@@ -42,7 +43,7 @@ public class ChaCtrTwo : MonoBehaviour {
             dic = (-target_1.position + transform.position) / Vector3.Distance(target_1.position, transform.position);
             if (la)
             {
-                target_1.velocity += dic * force;
+                target_1.velocity += dic * pull;
                
             }
         }

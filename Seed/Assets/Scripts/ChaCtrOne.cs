@@ -11,7 +11,7 @@ public class ChaCtrOne : MonoBehaviour {
     private Rigidbody rig;
     public float force;
     public bool la;
-
+    public float pull;
     // Use this for initialization
     void Awake () {
         rig = GetComponent<Rigidbody>();
@@ -39,7 +39,7 @@ public class ChaCtrOne : MonoBehaviour {
             dic = (-target_2.position + transform.position) / Vector3.Distance(target_2.position, transform.position);
             if (la)
             {
-                target_2.velocity += dic * force;
+                target_2.velocity += dic * pull;
                 
             }
         }
