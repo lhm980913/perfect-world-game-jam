@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114340032427199616}
   - component: {fileID: 114181080592171736}
   - component: {fileID: 65255815056769536}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -69,9 +69,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1201797348327906}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.71, y: -4.201, z: 0}
-  m_LocalScale: {x: 0.59, y: 0.61, z: 0.61}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -82.46501, y: -0.53999996, z: 0}
+  m_LocalScale: {x: 0.114193335, y: 0.61, z: 0.61}
   m_Children:
   - {fileID: 4498555214936878}
   m_Father: {fileID: 0}
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   check: {fileID: 114387113996295000}
+  fangxiang: 1
 --- !u!114 &114340032427199616
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/summer111.unity
+=======
+- path: Assets/Scenes/Summer.unity
+>>>>>>> a0b9258e26e96155310748ce6fb6a618d529df94
   isLoaded: 1
   isActive: 1
