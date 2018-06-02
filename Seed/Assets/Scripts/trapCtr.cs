@@ -9,7 +9,7 @@ public class trapCtr : MonoBehaviour {
     {
         if(other.gameObject.tag=="Player")
         {
-            other.gameObject.SetActive(false);
+            other.gameObject.SendMessage("death");
         }
     }
 }

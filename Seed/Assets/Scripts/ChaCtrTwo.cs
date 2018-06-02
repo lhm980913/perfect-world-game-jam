@@ -82,4 +82,8 @@ public class ChaCtrTwo : MonoBehaviour {
         OnFloor = false;
        
     }
+    public void death()
+    {
+        SceneManager.LoadScene("main");
+    }
 }

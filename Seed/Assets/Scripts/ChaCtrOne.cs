@@ -89,4 +89,8 @@ public class ChaCtrOne : MonoBehaviour {
         Onground = false;
         
     }
+    public void death()
+    {
+        SceneManager.LoadScene("main");
+    }
 }
