@@ -59,6 +59,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\cccccc.cs" />
+    <Compile Include="Assets\check.cs" />
+    <Compile Include="Assets\colliderToHurt.cs" />
     <Compile Include="Assets\gamemanager.cs" />
     <Compile Include="Assets\rollTobigBall.cs" />
     <Compile Include="Assets\rotateByPoint.cs" />
@@ -67,13 +70,19 @@
     <Compile Include="Assets\Scripts\camera_f.cs" />
     <Compile Include="Assets\Scripts\ChaCtrOne.cs" />
     <Compile Include="Assets\Scripts\ChaCtrTwo.cs" />
+    <Compile Include="Assets\Scripts\enemy_gravity.cs" />
+    <Compile Include="Assets\Scripts\enemy_walk.cs" />
     <Compile Include="Assets\Scripts\EnemyFloor.cs" />
     <Compile Include="Assets\Scripts\EnemyGround.cs" />
     <Compile Include="Assets\Scripts\OnFloorSensor.cs" />
     <Compile Include="Assets\Scripts\OnGroundSensor.cs" />
     <Compile Include="Assets\Scripts\RockCtr.cs" />
     <Compile Include="Assets\Scripts\trapCtr.cs" />
+    <Compile Include="Assets\Scripts\WaterCtr.cs" />
     <Compile Include="Assets\Scripts\WindArea.cs" />
+    <Compile Include="Assets\springToSummer.cs" />
+    <Compile Include="Assets\tiaolou.cs" />
+    <Compile Include="Assets\zhuang.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/perfect world game jam/Seed/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

@@ -11,5 +11,9 @@ public class trapCtr : MonoBehaviour {
         {
             other.gameObject.SendMessage("death");
         }
+        if (other.gameObject.tag == "enemy")
+        {
+            Destroy(other);
+        }
     }
 }

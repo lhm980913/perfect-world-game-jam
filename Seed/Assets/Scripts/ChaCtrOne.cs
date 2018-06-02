@@ -101,7 +101,7 @@ public class ChaCtrOne : MonoBehaviour {
     }
     public void death()
     {
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void InWater()
     {
@@ -111,4 +111,17 @@ public class ChaCtrOne : MonoBehaviour {
     {
         IsWater = false;
     }
+    public void succeed(string str)
+    {
+        PlayerPrefs.SetFloat("save_x", -1.5f);
+        //PlayAnimation(str);
+        StartCoroutine(coRoutine(str));
+
+    }
+    IEnumerator coRoutine(string str)
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(str);
+    }
+
 }
