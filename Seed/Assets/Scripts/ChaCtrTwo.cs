@@ -16,7 +16,7 @@ public class ChaCtrTwo : MonoBehaviour {
     {
         rig = GetComponent<Rigidbody>();
         //reset the player in the last saveplace
-        transform.position = new Vector3(PlayerPrefs.GetFloat("save_x"), transform.position.y, 0);
+        //transform.position = new Vector3(PlayerPrefs.GetFloat("save_x"), transform.position.y, 0);
     }
 
     // Update is called once per frame
@@ -37,7 +37,7 @@ public class ChaCtrTwo : MonoBehaviour {
         {
             rig.velocity = new Vector3(0, -5, 0);
         }
-        if (Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.Joystick2Button5) || Input.GetKeyDown(KeyCode.K))
         {
             Vector3 dic = new Vector3();
             dic = (-target_1.position + transform.position) / Vector3.Distance(target_1.position, transform.position);
@@ -47,13 +47,13 @@ public class ChaCtrTwo : MonoBehaviour {
                
             }
         }
-        if (Input.GetKeyUp(KeyCode.Joystick1Button1) || Input.GetKeyUp(KeyCode.K))
+        if (Input.GetKeyUp(KeyCode.Joystick2Button5) || Input.GetKeyUp(KeyCode.K))
         {
             la = false;
             target_1.velocity = new Vector3(0f, target_1.velocity.y, 0f);
         }
         //按B键，拉
-        if (Input.GetKey(KeyCode.Joystick1Button1) || Input.GetKey(KeyCode.K))
+        if (Input.GetKey(KeyCode.Joystick2Button5) || Input.GetKey(KeyCode.K))
         {
 
             Vector3 dic = new Vector3();

@@ -12,7 +12,7 @@ public class OnFloorSensor : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
-        radius = capcol.radius;
+        radius = capcol.radius-0.4f;
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class OnFloorSensor : MonoBehaviour {
     {
 
         point1 = transform.position - transform.up * (radius - 0.08f);
-        point2 = transform.position - transform.up * capcol.height + transform.up * radius;
+        point2 = transform.position - transform.up * capcol.height*0.1f + transform.up * radius;
         Collider[] outputCols = Physics.OverlapCapsule(point1, point2, radius, LayerMask.GetMask("Floor"));
         if (outputCols.Length != 0)
         {

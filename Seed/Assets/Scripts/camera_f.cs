@@ -48,9 +48,9 @@ public class camera_f : MonoBehaviour {
         
 
         float dis = Vector3.Distance(player1.transform.position, player2.transform.position);
-        if (dis > 7)
+        if (dis >13)
         {
-            averagePos = new Vector3(averagePos.x, averagePos.y,-9f-Mathf.Sqrt(Mathf.Abs(dis-7)));
+            averagePos = new Vector3(averagePos.x, averagePos.y,-9f-Mathf.Sqrt(Mathf.Abs(dis-13)));
         }
         else
         {

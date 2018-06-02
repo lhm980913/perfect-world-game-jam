@@ -16,7 +16,7 @@ public class ChaCtrOne : MonoBehaviour {
     void Awake () {
         rig = GetComponent<Rigidbody>();
         //reset the player in the last saveplace
-        transform.position = new Vector3(PlayerPrefs.GetFloat("save_x"), transform.position.y, 0);
+        //transform.position = new Vector3(PlayerPrefs.GetFloat("save_x"), transform.position.y, 0);
 	}
 	
 	// Update is called once per frame
@@ -32,7 +32,7 @@ public class ChaCtrOne : MonoBehaviour {
           
         }
         //按A键，跳跃
-        if (Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button5) || Input.GetKeyDown(KeyCode.Z))
         {
             Vector3 dic = new Vector3();
             
@@ -43,14 +43,14 @@ public class ChaCtrOne : MonoBehaviour {
                 
             }
         }
-        if (Input.GetKeyUp(KeyCode.Joystick1Button1) || Input.GetKeyUp(KeyCode.Z))
+        if (Input.GetKeyUp(KeyCode.Joystick1Button5) || Input.GetKeyUp(KeyCode.Z))
         {
            
                 la = false;
             target_2.velocity = new Vector3(0f, target_2.velocity.y, 0f);
         }
         //按B键，拉
-        if (Input.GetKey(KeyCode.Joystick1Button1)|| Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Joystick1Button5)|| Input.GetKey(KeyCode.Z))
         {
             
             Vector3 dic = new Vector3();
